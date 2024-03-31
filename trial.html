@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAKE NEWS DETECTION">
+    <meta name="keywords" content="FAKE OR REAL NEWS|LATEST OR OLD NEWS">
+    <link rel="shortcut icon" href="" type="image/x-icon" > 
+    <link rel="stylesheet" href="News.css">
+    <title>FAKE NEWS DETECTION</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - pandas
+    </py-env>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="sign-in.html"><img src=""></a></li>
+                <li><a href=""><b>FAKE/REAL</b></a></li>
+                <li><a href=""><strong>ABOUT</strong></a></li>
+                <li><a href=""><b>NEWS</b></a></li>
+                <li><a href=""><b>CONTACT</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div><H2>FAKE OR REAL NEWS DETECTOR</H2></div>
+        <div>
+            <input type="text" placeholder="DETECT BY LINK/URL"><br>
+            <button>SUBMIT</button>
+            <input type="reset" value="RESET"><hr>
+            <input type="text" placeholder="DETECT BY TEXT" id="text"><br>
+            <button onclick="call()">SUBMIT</button>
+            <input type="reset" value="RESET">
+        </div>
+    </main>
+    <footer>
+        <center>FAKE NEWS&copy;JAGO GRAHAK JAGO - 2022|Copyright&#174;</center>
+    </footer>
+</body>
+</html>
+<py-script>
+    import pandas as pd
+
+    df=pd.read_csv("Downloads/news/news.csv")
+    print(df.head())
+</py-script>
